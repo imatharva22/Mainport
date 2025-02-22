@@ -10,7 +10,7 @@
 body {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: scroll; /* Enable vertical scrolling */
     background-color: black;
 }
 
@@ -111,23 +111,24 @@ nav {
 
 section {
     width: 100%;
-    height: 90vh;
+    height: auto; /* Allow section to expand with content */
 }
 
 .main-container {
     width: 100%;
-    height: 100%;
+    height: auto; /* Allow main container to expand with content */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column; /* Stack items vertically */
 }
 
 .main-container .image {
     width: 500px;
-    height: 80vh;
+    height: auto; /* Maintain aspect ratio */
     border-radius: 100%;
     overflow: hidden;
-    box-shadow: 0 0 50px #e20404;
+    box-shadow: 0 0 50px #077b32;
 }
 
 .main-container .image img {
@@ -152,8 +153,9 @@ section {
 
 .main-container .content {
     color: white;
-    width: 40%;
+    width: 80%;
     min-height: 100px;
+    text-align: center; /* Center text */
 }
 
 .content h1 {
@@ -161,8 +163,8 @@ section {
 }
 
 .content h1 span {
-    color: #d13404;
-    text-shadow: 0 0 10px #de25d7;
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
 }
 
 .content .typewriter {
@@ -187,9 +189,9 @@ section {
     width: 3rem;
     height: 3rem;
     background-color: transparent;
-    border: 0.2rem solid #5f096b;
+    border: 0.2rem solid #077b32;
     border-radius: 50%;
-    color: #b92b0b;
+    color: #077b32;
     margin: 5px 15px;
     font-size: 1.5rem;
     transition: 0.2s linear;
@@ -206,7 +208,7 @@ section {
     width: 50%;
     height: 6vh;
     margin: 30px;
-    background-color: #0812da;
+    background-color: #077b32;
     color: white;
     border: none;
     outline: none;
@@ -260,14 +262,14 @@ section {
     .main-container .image {
         z-index: -1;
         width: 50%;
-        height: 60%;
+        height: auto;
     }
 }
 
 @media (max-width: 440px) {
     .main-container .image {
         width: 50%;
-        height: 60%;
+        height: auto;
         margin-bottom: 0px;
     }
 
